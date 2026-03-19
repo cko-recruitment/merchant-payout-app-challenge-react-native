@@ -10,7 +10,10 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.reactnativeinterview"
+      "bundleIdentifier": "com.anonymous.reactnativeinterview",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Allow $(PRODUCT_NAME) to use Face ID or Touch ID to securely authenticate payouts over £1,000."
+      }
     },
     "android": {
       "adaptiveIcon": {

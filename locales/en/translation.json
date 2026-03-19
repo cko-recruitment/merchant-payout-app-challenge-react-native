@@ -1,0 +1,38 @@
+{
+    "tabs": {
+        "home": "Home",
+        "payouts": "Payouts"
+    },
+    "home": {
+        "availableBalance": "Available Balance",
+        "pending": "Pending",
+        "businessAccount": "Business Account",
+        "recentActivity": "Recent Activity",
+        "noRecentActivity": "No recent activity",
+        "seeAll": "See all"
+    },
+    "payouts": {
+        "sendPayout": "Send Payout",
+        "amount": "Amount",
+        "currency": "Currency",
+        "currencyPlaceholder": "GBP",
+        "sendMoney": "Send Money",
+        "destinationIban": "Destination IBAN",
+        "ibanHint": "International Bank Account Number",
+        "reviewPayout": "Review Payout",
+        "reviewAndConfirm": "Review & Confirm",
+        "toIban": "To IBAN",
+        "cancel": "Cancel",
+        "tryAgain": "Try Again",
+        "confirm": "Confirm",
+        "payoutSent": "Payout Sent!",
+        "newPayout": "New Payout",
+        "invalidIban": "Invalid IBAN",
+        "payoutFailed": "Payout Failed"
+    },
+    "activity": {
+        "allTransactions": "All Transactions",
+        "loadingMore": "Loading more…",
+        "done": "Done"
+    }
+}

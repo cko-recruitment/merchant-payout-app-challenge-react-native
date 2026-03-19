@@ -1,0 +1,33 @@
+{
+    "tabs": {
+        "home": "Inicio",
+        "payouts": "Pagos"
+    },
+    "home": {
+        "availableBalance": "Saldo Disponible",
+        "pending": "Pendiente",
+        "currency": "Moneda",
+        "recentActivity": "Actividad Reciente",
+        "noRecentActivity": "Sin actividad reciente",
+        "seeAll": "Ver todo"
+    },
+    "payouts": {
+        "sendMoney": "Enviar Dinero",
+        "initiatePayout": "Iniciar Pago",
+        "destinationIban": "IBAN de Destino",
+        "ibanHint": "Número de Cuenta Bancaria Internacional",
+        "reviewPayout": "Revisar Pago",
+        "reviewAndConfirm": "Revisar y Confirmar",
+        "amount": "Monto",
+        "toIban": "Al IBAN",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "payoutSent": "¡Pago Enviado!",
+        "newPayout": "Nuevo Pago",
+        "invalidIban": "IBAN no válido"
+    },
+    "activity": {
+        "allTransactions": "Todas las Transacciones",
+        "loadingMore": "Cargando más…"
+    }
+}
