@@ -20,7 +20,7 @@ Your task is to build a merchant dashboard and payout flow that allows users to:
 * [📝 Evaluation Criteria](#-evaluation-criteria)
 * [📋 Implementation Steps](#-implementation-steps)
   * [Step 1: Merchant Home Screen](#step-1-merchant-home-screen)
-  * [Step 2: Transaction List Modal](#step-2-transaction-list-modal)
+  * [Step 2: Transaction List](#step-2-transaction-list)
   * [Step 3: Payout Initiation Form & Confirmation](#step-3-payout-initiation-form--confirmation)
   * [Step 4: Native Device Identity](#step-4-native-device-identity)
   * [Step 5: Native Biometric for Payouts over £1,000.00](#step-5-native-biometric-for-payouts-over-£100000)
@@ -91,7 +91,7 @@ Your solution will be evaluated based on:
 * Fetch balance data using the provided API client.
 * Display an account balance section showing the merchant's available balance and pending balance with the currency symbol from the API response.
 * Display a list of the 3 most recent activity items in a single-row layout showing only the description and amount.
-* Display a "show more" button that opens a modal with a full list of activity items.
+* Display a "Show More" (or "View All") button that opens the full list of activity items. You can push a new screen or present a sheet (modal); we do not assess which one you choose.
 * Handle loading and error states gracefully.
 
 <details>
@@ -114,14 +114,14 @@ Your solution will be evaluated based on:
 
 </details>
 
-### Step 2: Transaction List Modal
+### Step 2: Transaction List
 
 **Goal**: Display recent activity with enhanced functionality.
 
 **Requirements**:
 
-* Display the list of all activity items with type, description, amount, and date (formatted as `DD MM YYYY`).
-* Implement "Infinite Scroll" functionality on the transaction list modal. Load more items automatically as the user scrolls to the bottom.
+* Display the list of all activity items with type, description, amount, and date. Use any clear, consistent date format, for example `18 May 2026` (as in the screenshots) or `18 05 2026`.
+* Implement "Infinite Scroll" functionality on the transaction list. Load more items automatically as the user scrolls to the bottom.
 * Use cursor-based pagination to fetch additional activity items.
 * Handle loading and error states gracefully.
 
@@ -160,8 +160,10 @@ Your solution will be evaluated based on:
 * Capture the destination IBAN 
   * Valid IBAN formats (e.g., `GB29NWBK60161331926819`).
   * Invalid IBAN format (e.g., `FR1212345123451234567A12310131231231231`).
+  * These examples are the minimum: your validation must accept the valid one and reject the invalid one. Beyond that, how far you go is up to you (for example per-country length, character set or the mod-97 check digits), so tell us what you chose and why.
+  * The hint text under the IBAN field in the screenshots is illustrative. Update it to describe the rules you implement.
 * Ensure the form remains usable when the keyboard is visible.
-* Ensure the "Confirm" button is disabled if the input is empty, zero, or negative.
+* Ensure the button on the payout form that opens the confirmation screen ("Continue" on iOS, "Confirm" on Android in the screenshots) is disabled while the amount is empty, zero, or negative. How you handle an invalid IBAN (disabling that button, an inline error, or both) is your choice.
 * Display a confirmation screen summarizing the transaction before execution (as shown in the reference images).
 * Handle success response by showing Payout confirmation with amount and currency.
 * Handle failures (e.g., `4xx`, `5xx` errors, insufficient funds) and network errors.
